@@ -6,7 +6,6 @@ const Lang = imports.lang;
 
 let text, text_time;
 let TIMEOUT_MS = 1000;
-let time = 123456;
 
 function _hideHello() {
     Main.uiGroup.remove_actor(text);
@@ -55,7 +54,7 @@ function CurentTime()
 }
 
 //一个小时，按秒计算，可以自己调整时间
-var maxtime = 60*60
+var maxtime = 10;
 function init() {
 
     text_time = new St.Label({
@@ -67,21 +66,25 @@ function init() {
     let seconds;
 
     this._timeout = Mainloop.timeout_add(TIMEOUT_MS, function () {
-        if(maxtime>=0)
+        if(maxtime>0)
         {
             minutes = Math.floor(maxtime/60);
             seconds = Math.floor(maxtime%60);
             msg = "距离结束还有 "+minutes.toString()+" 分 "+seconds.toString()+" 秒";
             if(maxtime == 5*60) msg = '注意，还有5分钟!';
             maxtime = maxtime-1;
+            text_time.text = msg;
+            return true;
         }
-        else
+        else if(maxtime<=0)
         {
             //clearInterval(timer);
+            //msg = "时间到，结束!"+maxtime.toString();
             msg = "时间到，结束!";
+            _showHello();
+            text_time.text = msg;
+            return false;
         }
-        text_time.text = msg;
-        return true;
     });
 
     //text_time.text = msg;
@@ -94,5 +97,5 @@ function enable() {
 }
 
 function disable() {
-    Main.panel._rightBox.remove_child(button);
+    Main.panel._rightBox.remove_child(text_time);
 }
