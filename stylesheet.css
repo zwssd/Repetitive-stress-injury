@@ -1,0 +1,16 @@
+
+.helloworld-label {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(10,10,10,0.7);
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.panel-label {
+    padding: .4em 1.75em;
+    font-size: 10.5pt;
+    color: #cccccc;
+    font-weight: bold;
+}
