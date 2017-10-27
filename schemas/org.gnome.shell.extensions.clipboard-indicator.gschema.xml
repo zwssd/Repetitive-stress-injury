@@ -2,41 +2,17 @@
   <schema id="org.gnome.shell.extensions.clipboard-indicator"
       path="/org/gnome/shell/extensions/clipboard-indicator/">
 
-    <key type="i" name="history-size">
-        <default>15</default>
+    <key type="i" name="time-length">
+        <default>120</default>
         <summary>The number of items to save in history</summary>
         <description></description>
-        <range min="1" max="50"/>
+        <range min="1" max="14400"/>
     </key>
 
-    <key type="i" name="preview-size">
-        <default>30</default>
-        <summary>Amount of visible characters for clipboard items </summary>
-        <description>
-            The number of characters to display for every clipbaord item in
-            the history menu
-        </description>
-        <range min="10" max="100"/>
-    </key>
-
-    <key type="i" name="cache-size">
-        <default>1024</default>
-        <summary>The allowed size for the registry cache file</summary>
-        <description>
-            If the cache overflows this limit, the file will be overriden.
-            High limit might cause slowness of shell startup.
-        </description>
-        <range min="512" max="16384"/>
-    </key>
-
-    <key name="cache-disable" type="b">
+    <key name="auto-run" type="b">
       <default>false</default>
-        <summary>Disable the registry cache file and use memory only</summary>
-        <description>
-            Content is not stored and retrieved from a cache (registry.txt) file.
-            This avoid writing passwords to a plaintext file, but at the cost of persistant history.
-            Your clipboard history is lost after a gnome-shell session ends or the extension is reloaded.
-        </description>
+        <summary>Disable automatic Timings</summary>
+        <description></description>
     </key>
 
   </schema>

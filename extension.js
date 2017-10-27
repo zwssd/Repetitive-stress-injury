@@ -54,7 +54,8 @@ function _prefs(){
 
 function init(extensionMeta) {
     let localeDir = Me.dir.get_child('locale');
-    Gettext.bindtextdomain('repetitive-stress-injury', localeDir.get_path());
+	if (localeDir.query_exists(null))
+        Gettext.bindtextdomain('repetitive-stress-injury', localeDir.get_path());
 
     let msg;
     let minutes;
