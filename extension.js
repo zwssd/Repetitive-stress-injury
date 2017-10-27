@@ -2,12 +2,15 @@ const St = imports.gi.St;
 const Main = imports.ui.main;
 const Tweener = imports.ui.tweener;
 const Mainloop   = imports.mainloop;
+const Util       = imports.misc.util;
 
 const Gettext = imports.gettext;
 const _ = Gettext.domain('repetitive-stress-injury').gettext;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
+
+const Prefs = Me.imports.prefs;
 
 let text, text_time;
 let TIMEOUT_MS = 1000;
@@ -42,6 +45,13 @@ function _showRest() {
                        onComplete: _hideRest });
 }
 
+function _prefs(){
+    Util.spawn([
+        "gnome-shell-extension-prefs",
+        Me.uuid
+    ]);
+}
+
 function init(extensionMeta) {
     let localeDir = Me.dir.get_child('locale');
     Gettext.bindtextdomain('repetitive-stress-injury', localeDir.get_path());
@@ -54,7 +64,7 @@ function init(extensionMeta) {
         style_class: 'panel-label'
     });
 
-    this._timeout = Mainloop.timeout_add(TIMEOUT_MS, function () {
+    Mainloop.timeout_add(TIMEOUT_MS, function () {
         if(maxtime>0)
         {
             minutes = Math.floor(maxtime/60);
@@ -75,7 +85,7 @@ function init(extensionMeta) {
     });
 
     text_time.reactive = true;
-    text_time.connect('button-press-event', _showRest);
+    text_time.connect('button-press-event', _prefs);
 }
 
 function enable() {
