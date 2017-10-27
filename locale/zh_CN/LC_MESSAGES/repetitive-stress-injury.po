@@ -18,10 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: extension.js:10
-msgid "Hello, world!"
-msgstr "你好，世界！"
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "时间到，请进行休息。"
 
-#: extension.js:10
-msgid "helloworld"
-msgstr "你好，世界！"
+#: extension.js:56
+msgid "The distance is over "
+msgstr "距离结束还有 "
+
+#: extension.js:56
+msgid "Hours"
+msgstr "小时"
+
+#: extension.js:56
+msgid "Minutes"
+msgstr "分"
+
+#: extension.js:56
+msgid "Seconds"
+msgstr "秒"
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "注意，还有5分钟!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "时间到，倒计时结束!"

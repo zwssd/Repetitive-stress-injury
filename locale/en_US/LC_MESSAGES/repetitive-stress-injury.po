@@ -18,10 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: \n"
 
-#: extension.js:10
-msgid "Hello, world!"
-msgstr "Hi world!"
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "Time is up, please have a rest."
 
-#: extension.js:10
-msgid "helloworld"
-msgstr "Hi world!"
+#: extension.js:56
+msgid "The distance is over "
+msgstr "The distance is over "
+
+#: extension.js:56
+msgid "Hours"
+msgstr "hours"
+
+#: extension.js:56
+msgid "Minutes"
+msgstr "minutes"
+
+#: extension.js:56
+msgid "Seconds"
+msgstr "seconds"
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "Attention, five minutes!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "Time is up, the countdown is over!"
