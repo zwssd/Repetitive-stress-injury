@@ -14,12 +14,12 @@ let TIMEOUT_MS = 1000;
 //一个小时，按秒计算，可以自己调整时间
 let maxtime = 10;
 
-function _hideHello() {
+function _hideRest() {
     Main.uiGroup.remove_actor(text);
     text = null;
 }
 
-function _showHello() {
+function _showRest() {
     if (!text) {
         text = new St.Label({
             style_class: 'rest-label',
@@ -39,7 +39,7 @@ function _showHello() {
                      { opacity: 0,
                        time: 10,
                        transition: 'easeOutQuad',
-                       onComplete: _hideHello });
+                       onComplete: _hideRest });
 }
 
 function init(extensionMeta) {
@@ -61,20 +61,21 @@ function init(extensionMeta) {
             seconds = Math.floor(maxtime%60);
             msg = _("The distance is over ")+minutes.toString()+" "+ _("Minutes") +" "+seconds.toString()+" "+_("Seconds");
             if(maxtime == 5*60) msg = _("Attention, five minutes!");
-            maxtime = maxtime-1;
+            --maxtime;
             text_time.text = msg;
             return true;
         }
         else if(maxtime<=0)
         {
             msg = _("Time is up, the countdown is over!");
-            _showHello();
+            _showRest();
             text_time.text = msg;
             return false;
         }
     });
 
-    text_time.connect('button-press-event', _showHello);
+    text_time.reactive = true;
+    text_time.connect('button-press-event', _showRest);
 }
 
 function enable() {
