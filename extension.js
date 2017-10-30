@@ -14,9 +14,10 @@ const Prefs = Me.imports.prefs;
 
 let text, text_time;
 let TIMEOUT_MS = 1000;
-//一个小时，按秒计算，可以自己调整时间
-let MAXTIME = 60;
-let AUTORUN = false;
+//按秒计算，可以自己调整时间
+let MAXTIME = 10;
+let AUTORUN = true;
+let maxtime;
 
 function _hideRest() {
     Main.uiGroup.remove_actor(text);
@@ -63,7 +64,8 @@ function _loadSettings() {
 
 function _fetchSettings() {
     MAXTIME = this._settings.get_int(Prefs.Fields.TIME_LENGTH);
-    AUTORUN = this._settings.get_int(Prefs.Fields.AUTO_RUN);
+    maxtime = MAXTIME;
+    AUTORUN = this._settings.get_boolean(Prefs.Fields.AUTO_RUN);
 }
 
 function init(extensionMeta) {
@@ -83,20 +85,25 @@ function init(extensionMeta) {
     });
 
     Mainloop.timeout_add(TIMEOUT_MS, function () {
-        if (MAXTIME > 0) {
-            minutes = Math.floor(MAXTIME / 60);
-            seconds = Math.floor(MAXTIME % 60);
+        if (maxtime > 0) {
+            minutes = Math.floor(maxtime / 60);
+            seconds = Math.floor(maxtime % 60);
             msg = _("The distance is over ") + minutes.toString() + " " + _("Minutes") + " " + seconds.toString() + " " + _("Seconds");
-            if (MAXTIME == 5 * 60) msg = _("Attention, five minutes!");
-            --MAXTIME;
+            if (maxtime == 5 * 60) msg = _("Attention, five minutes!");
+            --maxtime;
             text_time.text = msg;
             result = true;
         }
-        else if (MAXTIME <= 0) {
+        else if (maxtime <= 0) {
             msg = _("Time is up, the countdown is over!");
             _showRest();
             text_time.text = msg;
-            result = false;
+            if(AUTORUN){
+                _loadSettings();
+                result = true;
+            }else{
+                result = false;
+            }
         }
         return result;
     });

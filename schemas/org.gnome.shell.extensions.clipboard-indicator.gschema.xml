@@ -10,7 +10,7 @@
     </key>
 
     <key name="auto-run" type="b">
-      <default>false</default>
+      <default>true</default>
         <summary>Disable automatic Timings</summary>
         <description></description>
     </key>
