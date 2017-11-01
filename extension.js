@@ -14,7 +14,7 @@ const Prefs = Me.imports.prefs;
 
 let text, text_time;
 let TIMEOUT_MS = 1000;
-//按秒计算，可以自己调整时间
+//按分钟计算，可以自己调整时间
 let MAXTIME = 10;
 let AUTORUN = true;
 let maxtime;
@@ -64,7 +64,7 @@ function _loadSettings() {
 
 function _fetchSettings() {
     MAXTIME = this._settings.get_int(Prefs.Fields.TIME_LENGTH);
-    maxtime = MAXTIME;
+    maxtime = MAXTIME*60;
     AUTORUN = this._settings.get_boolean(Prefs.Fields.AUTO_RUN);
 }
 
@@ -74,6 +74,7 @@ function init(extensionMeta) {
         Gettext.bindtextdomain('repetitive-stress-injury', localeDir.get_path());
 
     let msg;
+    let hours;
     let minutes;
     let seconds;
     let result = true;
@@ -86,9 +87,16 @@ function init(extensionMeta) {
 
     Mainloop.timeout_add(TIMEOUT_MS, function () {
         if (maxtime > 0) {
-            minutes = Math.floor(maxtime / 60);
-            seconds = Math.floor(maxtime % 60);
-            msg = _("The distance is over ") + minutes.toString() + " " + _("Minutes") + " " + seconds.toString() + " " + _("Seconds");
+            hours = Math.floor(maxtime / 3600);
+            if(hours<10)
+                hours = "0"+hours;
+            minutes = Math.floor(maxtime % 3600 / 60);
+            if(minutes<10)
+                minutes = "0"+minutes;
+            seconds = Math.floor(maxtime % 3600 % 60);
+            if(seconds<10)
+                seconds = "0"+seconds;
+            msg = hours.toString() + ":" + minutes.toString() + ":" + seconds.toString();
             if (maxtime == 5 * 60) msg = _("Attention, five minutes!");
             --maxtime;
             text_time.text = msg;
