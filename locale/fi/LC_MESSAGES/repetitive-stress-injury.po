@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-17 19:20+0200\n"
+"PO-Revision-Date: 2017-09-06 09:53+0300\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "Aika on jalkeilla, haluta hankkia lepuuttaa."
+
+#: extension.js:56
+msgid "The distance is over "
+msgstr "Etäisyys on ohi "
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "Huomio, viisi minuuttia!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "Aika on ajan, lähtö laskenta on ohi!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "Määritä ajan pituus (minuutti)"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "Aseta Auto Run"

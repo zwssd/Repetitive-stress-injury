@@ -1,15 +1,15 @@
 # Spanish translation for gnome-shell-extension-clipboard-indicator.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-shell-extension-clipboard-indicator package.
-# David <349705141@qq.com>, 2017.
+# Javier Junquera <javier.junquera.sanchez@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 10:55+0800\n"
-"PO-Revision-Date: 2017-10-26 10:55+0800\n"
-"Last-Translator: David <349705141@qq.com>\n"
+"POT-Creation-Date: 2016-10-12 16:08+0100\n"
+"PO-Revision-Date: 2016-10-12 16:16+0200\n"
+"Last-Translator: Javier Junquera <javier.junquera.sanchez@gmail.com>\n"
 "Language-Team: Español; Castellano <>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -20,28 +20,24 @@ msgstr ""
 
 #: extension.js:23
 msgid "Time is up, please have a rest."
-msgstr "Time is up, please have a rest."
+msgstr "Se acabó el tiempo, por favor descanse."
 
 #: extension.js:56
 msgid "The distance is over "
-msgstr "The distance is over "
-
-#: extension.js:56
-msgid "Hours"
-msgstr "hours"
-
-#: extension.js:56
-msgid "Minutes"
-msgstr "minutes"
-
-#: extension.js:56
-msgid "Seconds"
-msgstr "seconds"
+msgstr "La distancia ha terminado "
 
 #: extension.js:57
 msgid "Attention, five minutes!"
-msgstr "Attention, five minutes!"
+msgstr "¡ atención, cinco minutos!"
 
 #: extension.js:64
 msgid "Time is up, the countdown is over!"
-msgstr "Time is up, the countdown is over!"
+msgstr "¡ el tiempo se acabó, la cuenta regresiva ha terminado!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "Fije la longitud del tiempo (minuto)"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "Establecer ejecución automática"

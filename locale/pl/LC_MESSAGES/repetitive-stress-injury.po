@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-17 19:20+0200\n"
+"PO-Revision-Date: 2016-11-22 17:34+0100\n"
+"Last-Translator: Piotr Komur <pkomur@gmail.com>\n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "Czas się skończy, proszę odpocząć."
+
+#: extension.js:56
+msgid "The distance is over "
+msgstr "Odległość jest ponad "
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "Uwaga, pięć minut!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "Czas się skończy, odliczanie jest ponad!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "Ustawić czas (minuty)"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "Automatycznego uruchamiania"

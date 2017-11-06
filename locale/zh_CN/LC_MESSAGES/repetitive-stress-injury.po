@@ -26,18 +26,6 @@ msgstr "时间到，请进行休息。"
 msgid "The distance is over "
 msgstr "距离结束还有 "
 
-#: extension.js:56
-msgid "Hours"
-msgstr "小时"
-
-#: extension.js:56
-msgid "Minutes"
-msgstr "分"
-
-#: extension.js:56
-msgid "Seconds"
-msgstr "秒"
-
 #: extension.js:57
 msgid "Attention, five minutes!"
 msgstr "注意，还有5分钟!"
@@ -45,3 +33,11 @@ msgstr "注意，还有5分钟!"
 #: extension.js:64
 msgid "Time is up, the countdown is over!"
 msgstr "时间到，倒计时结束!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "设置时间长度（分钟）"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "设置自动执行"

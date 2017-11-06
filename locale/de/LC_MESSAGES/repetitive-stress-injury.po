@@ -1,0 +1,43 @@
+# German translation for gnome-shell-extension-clipboard-indicator.
+# Copyright (C) 2014-2015, Yotam Bar-On
+# This file is distributed under the same license as the gnome-shell-extension-clipboard-indicator package.
+# Jens Lody <openweather@jenslody.de>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-17 19:20+0200\n"
+"PO-Revision-Date: 2015-04-26 16:15+0200\n"
+"Last-Translator: Jens Lody <openweather@jenslody.de>\n"
+"Language-Team: Deutsch <openweather@jenslody.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "Die Zeit ist oben, bitte ruhen Sie sich aus."
+
+#: extension.js:56
+msgid "The distance is over "
+msgstr "Der Abstand ist vorbei "
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "Achtung, fünf Minuten!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "Die Zeit ist vorbei, der Countdown ist vorbei!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "Festlegen der Zeitdauer (Minute)"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "Automatisches Ausführen festlegen"

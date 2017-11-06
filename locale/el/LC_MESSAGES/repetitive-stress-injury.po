@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-17 19:20+0200\n"
+"PO-Revision-Date: 2017-05-04 17:27+0300\n"
+"Last-Translator: Raphael Rochet <raphael@rri.fr>\n"
+"Language-Team: \n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: extension.js:23
+msgid "Time is up, please have a rest."
+msgstr "Χρόνος είναι επάνω, παρακαλώ να έχετε ένα υπόλοιπο."
+
+#: extension.js:56
+msgid "The distance is over "
+msgstr "Η απόσταση είναι πάνω από "
+
+#: extension.js:57
+msgid "Attention, five minutes!"
+msgstr "Προσοχή, πέντε λεπτά!"
+
+#: extension.js:64
+msgid "Time is up, the countdown is over!"
+msgstr "Ο χρόνος, η αντίστροφη μέτρηση είναι πάνω!"
+
+#: prefs.js:53
+msgid "Set the length of time (minute)"
+msgstr "Ορίστε το χρονικό διάστημα (λεπτά)"
+
+#: prefs.js:58
+msgid "Set auto run"
+msgstr "Ορίστε αυτόματη εκτέλεση"
